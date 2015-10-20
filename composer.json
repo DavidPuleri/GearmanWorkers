@@ -1,0 +1,21 @@
+{
+  "name": "globalsport/gearman",
+  "type": "library",
+  "require": {
+    "php": ">=5.5",
+    "symfony/console": "^2.7"
+
+  },
+  "require-dev": {
+    "symfony/phpunit-bridge": "3.0.*@dev",
+    "phpunit/phpunit": "4.8.*@dev"
+  },
+  "autoload": {
+    "psr-4": {"": "src"}
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.*-dev"
+    }
+  }
+}
