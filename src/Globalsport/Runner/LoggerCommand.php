@@ -24,6 +24,7 @@ class LoggerCommand extends Command
             fwrite($fsockopen, $e->workload());
             fclose($fsockopen);
 
+            echo "sent" . $e->workload() . ' to 0.0.0.0:12122';
 
         });
         while ($worker->work()) ;
