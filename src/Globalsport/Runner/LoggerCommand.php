@@ -11,14 +11,14 @@ class LoggerCommand extends Command
 {
     protected function configure()
     {
-        $this->setName('gearman:logger');
+        $this->setName('gearman:execution-time');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $worker = new GearmanWorker();
         $worker->addServer();
-        $worker->addFunction("log", function ($e) {
+        $worker->addFunction("executionTime", function ($e) {
 
             $fsockopen = fsockopen('tcp://0.0.0.0', 12122);
             fwrite($fsockopen, $e->workload());
